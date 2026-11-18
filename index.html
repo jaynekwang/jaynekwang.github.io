@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jayne Kwang · AI / ML</title>
+<meta name="description" content="Jayne Kwang, Computer Science graduate (First Class Honours) focused on computer vision, generative AI and AI safety.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fafaf9;--surface:#fff;--text:#1c1917;--muted:#57534e;--line:#e7e5e4;--accent:#0f766e;--accent-soft:#ccfbf1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c0a09;--surface:#1c1917;--text:#f5f5f4;--muted:#a8a29e;--line:#292524;--accent:#2dd4bf;--accent-soft:#134e4a}}
+:root[data-theme="dark"]{--bg:#0c0a09;--surface:#1c1917;--text:#f5f5f4;--muted:#a8a29e;--line:#292524;--accent:#2dd4bf;--accent-soft:#134e4a}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg);color:var(--text);font:16px/1.6 Inter,system-ui,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+header{padding:72px 0 40px}
+.tag{font:500 13px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.04em}
+h1{font-size:clamp(32px,6vw,48px);line-height:1.1;margin:10px 0 14px;letter-spacing:-.02em}
+.lead{color:var(--muted);font-size:18px;max-width:640px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.btn{border:1px solid var(--line);background:var(--surface);color:var(--text);padding:8px 14px;border-radius:8px;font-weight:500;font-size:14px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--bg)}
+section{padding:32px 0;border-top:1px solid var(--line)}
+h2{font-size:14px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:20px}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr))}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.card h3{font-size:17px;line-height:1.3}
+.card p{color:var(--muted);font-size:14.5px}
+.card .meta{font:500 12px "JetBrains Mono",monospace;color:var(--accent)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto}
+.chip{font-size:12px;background:var(--accent-soft);color:var(--text);padding:3px 9px;border-radius:999px}
+.row{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.row strong{font-weight:600}.row span{color:var(--muted);font-size:14px}
+.item+.item{margin-top:18px}.item p,.item li{color:var(--muted);font-size:15px}
+ul{padding-left:18px;margin-top:6px}
+.skills{display:grid;grid-template-columns:140px 1fr;gap:8px 16px;font-size:15px}
+.skills dt{color:var(--muted)}
+@media(max-width:520px){.skills{grid-template-columns:1fr}.skills dd{margin-bottom:8px}}
+footer{padding:32px 0 56px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="tag">AI / MACHINE LEARNING · KUALA LUMPUR</div>
+  <h1>Jayne Kwang</h1>
+  <p class="lead">Computer Science graduate with First Class Honours from Lancaster University. I build computer vision pipelines, work with generative models, and study how to make AI systems safe. Looking for an entry-level AI / ML Engineer role in Malaysia.</p>
+  <div class="links">
+    <a class="btn primary" href="mailto:jaynekwang93@gmail.com">Email me</a>
+    <a class="btn" href="https://github.com/jaynekwang">GitHub</a>
+    <a class="btn" href="resume.pdf">Resume (PDF)</a>
+  </div>
+</header>
+
+<section>
+  <h2>Projects</h2>
+  <div class="grid">
+    <article class="card">
+      <div class="meta">FINAL-YEAR PROJECT</div>
+      <h3>Scene Completion &amp; Segmentation for Glaucoma Assessment</h3>
+      <p>End-to-end medical CV pipeline: vessel extraction, alpha-blended latent-diffusion inpainting, and multiclass U-Net segmentation on 512×512 fundus images. An SSIM quality check with a Navier–Stokes fallback cut cup-to-disc ratio error by about 30%.</p>
+      <div class="chips"><span class="chip">PyTorch</span><span class="chip">OpenCV</span><span class="chip">Stable Diffusion</span></div>
+      <a href="https://github.com/jaynekwang/glaucoma-cdr-pipeline">View code →</a>
+    </article>
+    <article class="card">
+      <div class="meta">AI SAFETY</div>
+      <h3>Secure AI System</h3>
+      <p>Simulated data poisoning (71.92% attack success) and FGSM evasion (100%) against face-recognition CNNs, then built a two-tier LLM guardrail (keyword filter plus judge LLM) for prompt injection, jailbreaks and data leaks.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">TensorFlow</span><span class="chip">scikit-learn</span></div>
+      <a href="https://github.com/jaynekwang/secure-ai-attacks-and-guardrails">View code →</a>
+    </article>
+    <article class="card">
+      <div class="meta">COMPUTER VISION</div>
+      <h3>Feature Matching &amp; Hough Transform</h3>
+      <p>Keypoint detection, descriptor extraction and match filtering robust to viewpoint and lighting changes, plus a circular Hough Transform written from scratch for coin counting.</p>
+      <div class="chips"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">NumPy</span></div>
+      <a href="https://github.com/jaynekwang/feature-matching-hough-transform">View code →</a>
+    </article>
+    <article class="card">
+      <div class="meta">HACKATHON · TEAM PROJECT</div>
+      <h3>Werewolves: Multi-Agent Strategy Game</h3>
+      <p>Full-stack multi-agent system where agents make decentralised decisions, deceive based on their roles, and reason probabilistically about who is who.</p>
+      <div class="chips"><span class="chip">JavaScript</span><span class="chip">Multi-Agent Systems</span></div>
+      <a href="https://github.com/nanalim/Werewolf">View code →</a>
+    </article>
+  </div>
+</section>
+
+<section>
+  <h2>Experience</h2>
+  <div class="item">
+    <div class="row"><strong>AI Intern · ARx Media Sdn Bhd</strong><span>Kuching · Jul – Sep 2025</span></div>
+    <ul>
+      <li>Designed and refined LLM prompts to improve narrative quality and consistency in an AI storytelling app.</li>
+      <li>Sourced content to expand storytelling capabilities and support dataset development.</li>
+      <li>Supported model integration and ran end-to-end QA on accuracy, logical consistency and stability.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="item">
+    <div class="row"><strong>BSc (Hons) Computer Science, First Class · Lancaster University</strong><span>2024 – 2026</span></div>
+    <p>Deep Learning, Computer Vision, NLP, Secure AI, Artificial Intelligence</p>
+  </div>
+  <div class="item">
+    <div class="row"><strong>BSc (Hons) Computer Science, Transfer Programme · Sunway University</strong><span>2023 – 2024</span></div>
+    <p>CGPA 3.71 / 4.00</p>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>Languages</dt><dd>Python, Java, JavaScript, SQL, HTML/CSS</dd>
+    <dt>ML &amp; CV</dt><dd>PyTorch, TensorFlow/Keras, OpenCV, scikit-learn, Hugging Face Diffusers, NumPy, Pandas</dd>
+    <dt>Focus</dt><dd>Computer Vision, Deep Learning, Generative AI, AI Safety, Prompt Engineering, Multi-Agent Systems</dd>
+    <dt>Tools</dt><dd>Git, GitLab, Linux / CLI</dd>
+    <dt>Spoken</dt><dd>English, Chinese, Bahasa Malaysia</dd>
+  </dl>
+</section>
+
+<footer>© 2026 Jayne Kwang · <a href="mailto:jaynekwang93@gmail.com">jaynekwang93@gmail.com</a></footer>
+</div>
+</body>
+</html>
